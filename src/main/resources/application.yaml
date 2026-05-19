@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Spring-boot-essentials-jap
+  datasource:
+    url: jdbc:mysql://localhost:3306/gym_security?createDatabaseIfNotExist=true
+    username: root
+    password: 123
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  expiration: ${JWT_EXPIRATION:900000} # 15 minutos
+  key: ${JWT_KEY:Mj2gyXKgKwEWtLIsgI4L3w60j5AjAFHBQ6AKvQzZwZBAkZ9Aak3THn6rluyVq3kiBVNayy4C!MYt0iJppa4uUEk_yr=io!Bve4ZYFYKjvhktIskMBXUdF$vTP!t1ZW-bvvosZABk2MG&zhU#cLN7bLn0!DlARLCE8KSlh3Kr61xnsvVS&yAHD3vcD41J1ZPLr00HNrGzG8bafnx9B=eaRB6cWSnyLj-E8D3x1h9iPZT0gBPU6CFhDKUDtKnc8Ld7cdYhFovM$#RLPgaKelzz2bwHw9lF9Q8BUmdn5K-fcC1Gw-VQfgf0OKgXPGy1D$vuHxCmvQpZh3H=&i7fnt=WgH4$}
